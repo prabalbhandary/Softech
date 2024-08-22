@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Pricing = () => {
+  // State to keep track of the selected pricing plan
+  const [isAnnual, setIsAnnual] = useState(true);
+
   return (
     <section className="max-w-6xl mx-auto p-6">
       <h1 className="text-4xl font-bold text-center mb-4">Pick Your Plan</h1>
@@ -8,8 +11,18 @@ const Pricing = () => {
         Track time on projects with your team.
       </p>
       <div className="flex justify-center mb-8">
-        <button className="px-6 py-3 mx-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 transition">Annual</button>
-        <button className="px-6 py-3 mx-2 text-white bg-gray-700 rounded-md hover:bg-gray-800 transition">Monthly</button>
+        <button
+          className={`px-6 py-3 mx-2 text-white ${isAnnual ? 'bg-blue-600' : 'bg-blue-500'} rounded-md hover:bg-blue-600 transition`}
+          onClick={() => setIsAnnual(true)}
+        >
+          Annual
+        </button>
+        <button
+          className={`px-6 py-3 mx-2 text-white ${!isAnnual ? 'bg-gray-800' : 'bg-gray-700'} rounded-md hover:bg-gray-800 transition`}
+          onClick={() => setIsAnnual(false)}
+        >
+          Monthly
+        </button>
       </div>
       <div className="flex justify-center gap-12">
         <div className="bg-white shadow-lg rounded-lg p-6 max-w-sm w-full">
@@ -30,7 +43,15 @@ const Pricing = () => {
           <h2 className="text-2xl font-semibold mb-2">Pro</h2>
           <p className="text-gray-600 mb-4">For freelancers and teams actively managing their time.</p>
           <div className="text-4xl font-bold mb-4">
-            $8<span className="text-base font-medium">USD</span><span className="text-sm text-gray-500"> per user per month</span>
+            {isAnnual ? (
+              <>
+                $8<span className="text-base font-medium">USD</span><span className="text-sm text-gray-500"> per user per month</span>
+              </>
+            ) : (
+              <>
+                $9<span className="text-base font-medium">USD</span><span className="text-sm text-gray-500"> per user per month</span>
+              </>
+            )}
           </div>
           <ul className="mb-4 list-disc pl-5 space-y-2">
             <li>Everything in Free PLUS</li>
