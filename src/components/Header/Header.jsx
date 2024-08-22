@@ -11,7 +11,7 @@ const Header = () => {
     "https://cdn.prod.website-files.com/64148069036e35d5954d1323/64148069036e352ca84d1761_myhours-logo.svg";
 
   const handleResourcesClick = () => {
-    setIsResourcesOpen(prev => !prev);
+    setIsResourcesOpen((prev) => !prev);
     setIsResourcesHovered(false);
   };
 
@@ -30,8 +30,12 @@ const Header = () => {
           <img src={Logo} alt="Logo" className="w-36" />
         </Link>
         <div className="flex items-center space-x-8">
-          <Link to="#" className="text-teal-500 hover:underline">How it works</Link>
-          <Link to="#" className="text-teal-500 hover:underline">Pricing</Link>
+          <Link to="/works" className="text-teal-500 hover:underline">
+            How it works
+          </Link>
+          <Link to="/pricing" className="text-teal-500 hover:underline">
+            Pricing
+          </Link>
           <div
             className="relative"
             onMouseEnter={handleMouseEnter}
@@ -43,27 +47,74 @@ const Header = () => {
             >
               Resources
               {isResourcesOpen || isResourcesHovered ? (
-                <CiCircleChevUp style={{ width: '1.5rem', height: '1.5rem' }} className="ml-2" />
+                <CiCircleChevUp
+                  style={{ width: "1.5rem", height: "1.5rem" }}
+                  className="ml-2"
+                />
               ) : (
-                <CiCircleChevDown style={{ width: '1.5rem', height: '1.5rem' }} className="ml-2" />
+                <CiCircleChevDown
+                  style={{ width: "1.5rem", height: "1.5rem" }}
+                  className="ml-2"
+                />
               )}
             </button>
             <div
               className={`absolute bg-white mt-2 py-2 rounded-lg w-48 shadow-lg ${
-                isResourcesOpen || isResourcesHovered ? 'block' : 'hidden'
+                isResourcesOpen || isResourcesHovered ? "block" : "hidden"
               }`}
             >
-              <Link to="#" className="text-teal-500 block px-4 py-2 hover:underline">Use cases</Link>
-              <Link to="#" className="text-teal-500 block px-4 py-2 hover:underline">Industries</Link>
-              <Link to="#" className="text-teal-500 block px-4 py-2 hover:underline">Case studies</Link>
-              <Link to="#" className="text-teal-500 block px-4 py-2 hover:underline">Help center</Link>
-              <Link to="#" className="text-teal-500 block px-4 py-2 hover:underline">Security & privacy</Link>
-              <Link to="#" className="text-teal-500 block px-4 py-2 hover:underline">Customer reviews</Link>
-              <Link to="#" className="text-teal-500 block px-4 py-2 hover:underline">About My Hours</Link>
+              <Link
+                to="/usecases"
+                className="text-teal-500 block px-4 py-2 hover:underline"
+              >
+                Use cases
+              </Link>
+              <Link
+                to="/industries"
+                className="text-teal-500 block px-4 py-2 hover:underline"
+              >
+                Industries
+              </Link>
+              <Link
+                to="/casestudy"
+                className="text-teal-500 block px-4 py-2 hover:underline"
+              >
+                Case studies
+              </Link>
+              <Link
+                to="/help"
+                className="text-teal-500 block px-4 py-2 hover:underline"
+              >
+                Help center
+              </Link>
+              <Link
+                to="/security"
+                className="text-teal-500 block px-4 py-2 hover:underline"
+              >
+                Security & privacy
+              </Link>
+              <Link
+                to="/customer-reviews"
+                className="text-teal-500 block px-4 py-2 hover:underline"
+              >
+                Customer reviews
+              </Link>
+              <Link
+                to="/about"
+                className="text-teal-500 block px-4 py-2 hover:underline"
+              >
+                About My Hours
+              </Link>
             </div>
           </div>
-          <Link to="#" className="text-teal-500 hover:underline">Sign in</Link>
-          <button className="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600">Get My Hours Free</button>
+          <Link to="/login" className="text-teal-500 hover:underline">
+            Sign in
+          </Link>
+          <Link to="/register">
+            <button className="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600">
+              Get My Hours Free
+            </button>
+          </Link>
         </div>
       </div>
       <div className="fixed top-0 left-0 w-full bg-white z-50 md:hidden">
@@ -85,8 +136,20 @@ const Header = () => {
         } md:hidden`}
       >
         <nav className="flex flex-col items-center py-4 space-y-4">
-          <Link to="#" className="text-teal-500 hover:underline" onClick={() => setIsMenuOpen(false)}>How it works</Link>
-          <Link to="#" className="text-teal-500 hover:underline" onClick={() => setIsMenuOpen(false)}>Pricing</Link>
+          <Link
+            to="/works"
+            className="text-teal-500 hover:underline"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            How it works
+          </Link>
+          <Link
+            to="/pricing"
+            className="text-teal-500 hover:underline"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Pricing
+          </Link>
           <div
             className="relative"
             onMouseEnter={handleMouseEnter}
@@ -98,27 +161,88 @@ const Header = () => {
             >
               Resources
               {isResourcesOpen || isResourcesHovered ? (
-                <CiCircleChevUp style={{ width: '1.5rem', height: '1.5rem' }} className="ml-2" />
+                <CiCircleChevUp
+                  style={{ width: "1.5rem", height: "1.5rem" }}
+                  className="ml-2"
+                />
               ) : (
-                <CiCircleChevDown style={{ width: '1.5rem', height: '1.5rem' }} className="ml-2" />
+                <CiCircleChevDown
+                  style={{ width: "1.5rem", height: "1.5rem" }}
+                  className="ml-2"
+                />
               )}
             </button>
             <div
               className={`absolute bg-white mt-2 py-2 rounded-lg shadow-lg w-full ${
-                isResourcesOpen || isResourcesHovered ? 'block' : 'hidden'
+                isResourcesOpen || isResourcesHovered ? "block" : "hidden"
               }`}
             >
-              <Link to="#" className="text-teal-500 block px-4 py-2 hover:underline" onClick={() => setIsMenuOpen(false)}>Use cases</Link>
-              <Link to="#" className="text-teal-500 block px-4 py-2 hover:underline" onClick={() => setIsMenuOpen(false)}>Industries</Link>
-              <Link to="#" className="text-teal-500 block px-4 py-2 hover:underline" onClick={() => setIsMenuOpen(false)}>Case studies</Link>
-              <Link to="#" className="text-teal-500 block px-4 py-2 hover:underline" onClick={() => setIsMenuOpen(false)}>Help center</Link>
-              <Link to="#" className="text-teal-500 block px-4 py-2 hover:underline" onClick={() => setIsMenuOpen(false)}>Security & privacy</Link>
-              <Link to="#" className="text-teal-500 block px-4 py-2 hover:underline" onClick={() => setIsMenuOpen(false)}>Customer reviews</Link>
-              <Link to="#" className="text-teal-500 block px-4 py-2 hover:underline" onClick={() => setIsMenuOpen(false)}>About My Hours</Link>
+              <Link
+                to="/usecases"
+                className="text-teal-500 block px-4 py-2 hover:underline"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Use cases
+              </Link>
+              <Link
+                to="/industries"
+                className="text-teal-500 block px-4 py-2 hover:underline"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Industries
+              </Link>
+              <Link
+                to="/casestudy"
+                className="text-teal-500 block px-4 py-2 hover:underline"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Case studies
+              </Link>
+              <Link
+                to="/help"
+                className="text-teal-500 block px-4 py-2 hover:underline"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Help center
+              </Link>
+              <Link
+                to="/security"
+                className="text-teal-500 block px-4 py-2 hover:underline"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Security & privacy
+              </Link>
+              <Link
+                to="customer-reviews"
+                className="text-teal-500 block px-4 py-2 hover:underline"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Customer reviews
+              </Link>
+              <Link
+                to="/about"
+                className="text-teal-500 block px-4 py-2 hover:underline"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About My Hours
+              </Link>
             </div>
           </div>
-          <Link to="#" className="text-teal-500 hover:underline" onClick={() => setIsMenuOpen(false)}>Sign in</Link>
-          <button className="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600" onClick={() => setIsMenuOpen(false)}>Get My Hours Free</button>
+          <Link
+            to="/login"
+            className="text-teal-500 hover:underline"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Sign in
+          </Link>
+          <Link to="/register">
+            <button
+              className="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Get My Hours Free
+            </button>
+          </Link>
         </nav>
       </div>
     </header>

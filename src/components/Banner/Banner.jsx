@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
   return (
@@ -20,9 +21,11 @@ const Banner = () => {
           includes advanced features like invoicing, admin controls, and priority support.
         </p>
         <div className="flex justify-center">
+          <Link to="/register">
           <button className="bg-teal-700 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:bg-teal-800 transition duration-300">
             Get Started - It's Free
           </button>
+          </Link>
         </div>
       </div>
     </section>
