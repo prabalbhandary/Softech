@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 const Pricing = () => {
-  // State to keep track of the selected pricing plan
   const [isAnnual, setIsAnnual] = useState(true);
 
   return (
