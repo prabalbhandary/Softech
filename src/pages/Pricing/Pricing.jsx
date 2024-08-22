@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 
 const Pricing = () => {
   const [isAnnual, setIsAnnual] = useState(true);
-  const annualPrice = "$8USD per user per month";
-  const monthlyPrice = "$9USD per user per month";
   const features = {
     free: [
       'Up to 5 users',
