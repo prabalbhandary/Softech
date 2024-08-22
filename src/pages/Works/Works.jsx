@@ -1,7 +1,6 @@
 import React from "react";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Banner from "../../components/Banner/Banner";
 
 const Works = () => {
   const videoUrl = "https://www.youtube.com/embed/FkQWpQd9Zdo";
