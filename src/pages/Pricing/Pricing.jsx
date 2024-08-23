@@ -43,7 +43,7 @@ const Pricing = () => {
             For individuals or teams just getting started with time tracking.
           </p>
           <p className="text-2xl font-semibold mb-4">
-            <span className="text-xl">$</span>
+            <span className="text-xl">$</span>{" "}
             <strong>0</strong> USD
           </p>
           <p className="mb-4">Up to 5 users.</p>
@@ -63,7 +63,7 @@ const Pricing = () => {
             For freelancers and teams actively managing their time.
           </p>
           <p className="text-2xl font-semibold mb-4">
-            <span className="text-xl">$</span>
+            <span className="text-xl">$</span>{" "}
             <strong>{isAnnual ? 8 : 9}</strong> USD
           </p>
           <p className="mb-4">per user per month</p>
