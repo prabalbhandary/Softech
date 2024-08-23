@@ -8,6 +8,7 @@ import Pricing from "./pages/Pricing/Pricing";
 import UseCases from "./pages/UseCases/UseCases";
 import Industries from "./pages/Industries/Industries";
 import CaseStudy from "./pages/CaseStudy/CaseStudy";
+import Help from "./pages/Help/Help";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/usecases" element={<UseCases />} />
           <Route path="/industries" element={<Industries />} />
           <Route path="/casestudy" element={<CaseStudy />} />
+          <Route path="/help" element={<Help />} />
         </Routes>
       </main>
       <Footer />
