@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
+import FAQ from "../FAQ/FAQ";
 
 const Pricing = () => {
   const [isAnnual, setIsAnnual] = useState(true);
@@ -598,6 +599,7 @@ const Pricing = () => {
           </tbody>
         </table>
       </div>
+      <FAQ />
     </section>
   );
 };
