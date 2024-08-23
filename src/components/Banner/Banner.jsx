@@ -15,9 +15,9 @@ const Banner = () => {
           My Hours is Free for teams of up to 5 users.
         </p>
         <p className="text-lg text-gray-800 mb-8 max-w-md mx-auto">
-          <span className="text-teal-700 font-medium underline hover:text-teal-900 hover:no-underline transition duration-300">
+          <Link to="#" className="text-teal-700 font-medium underline hover:text-teal-900 hover:no-underline transition duration-300">
             Pro paid plan
-          </span>{' '}
+          </Link>{' '}
           includes advanced features like invoicing, admin controls, and priority support.
         </p>
         <div className="flex justify-center">

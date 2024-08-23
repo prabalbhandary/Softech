@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { CiCircleChevDown, CiCircleChevUp } from "react-icons/ci";
+import Banner from "../../components/Banner/Banner";
 
 const Questions = [
   "Will I be charged after the 14 day trial?",
@@ -59,6 +60,7 @@ const FAQ = () => {
           </div>
         ))}
       </div>
+      <Banner />
     </section>
   );
 };
