@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { CiCircleChevDown, CiCircleChevUp } from "react-icons/ci";
 import Banner from "../../components/Banner/Banner";
+import UserSaying from "../../components/UserSaying/UserSaying";
+import HaveQuestion from "../../components/HaveQuestion/HaveQuestion";
 
 const Questions = [
   "Will I be charged after the 14 day trial?",
@@ -60,6 +62,8 @@ const FAQ = () => {
           </div>
         ))}
       </div>
+      <UserSaying />
+      <HaveQuestion />
       <Banner />
     </section>
   );
