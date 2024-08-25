@@ -9,6 +9,8 @@ import UseCases from "./pages/UseCases/UseCases";
 import Industries from "./pages/Industries/Industries";
 import CaseStudy from "./pages/CaseStudy/CaseStudy";
 import Help from "./pages/Help/Help";
+import SecurityPrivacy from "./pages/SecurityPrivacy/SecurityPrivacy";
+import CustomerReview from "./pages/CustomerReview/CustomerReview";
 
 const App = () => {
   return (
@@ -23,6 +25,8 @@ const App = () => {
           <Route path="/industries" element={<Industries />} />
           <Route path="/casestudy" element={<CaseStudy />} />
           <Route path="/help" element={<Help />} />
+          <Route path="/security" element={<SecurityPrivacy />} />
+          <Route path="/customer-reviews" element={<CustomerReview />} />
         </Routes>
       </main>
       <Footer />
