@@ -12,6 +12,7 @@ import Help from "./pages/Help/Help";
 import SecurityPrivacy from "./pages/SecurityPrivacy/SecurityPrivacy";
 import CustomerReview from "./pages/CustomerReview/CustomerReview";
 import About from "./pages/About/About";
+import Login from "./pages/Login/Login";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/security" element={<SecurityPrivacy />} />
           <Route path="/customer-reviews" element={<CustomerReview />} />
           <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </main>
       <Footer />
