@@ -13,6 +13,7 @@ import SecurityPrivacy from "./pages/SecurityPrivacy/SecurityPrivacy";
 import CustomerReview from "./pages/CustomerReview/CustomerReview";
 import About from "./pages/About/About";
 import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/customer-reviews" element={<CustomerReview />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </main>
       <Footer />
