@@ -11,6 +11,7 @@ import CaseStudy from "./pages/CaseStudy/CaseStudy";
 import Help from "./pages/Help/Help";
 import SecurityPrivacy from "./pages/SecurityPrivacy/SecurityPrivacy";
 import CustomerReview from "./pages/CustomerReview/CustomerReview";
+import About from "./pages/About/About";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/help" element={<Help />} />
           <Route path="/security" element={<SecurityPrivacy />} />
           <Route path="/customer-reviews" element={<CustomerReview />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </main>
       <Footer />
