@@ -92,6 +92,8 @@ const Register = () => {
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-300"
           >
             <option value="us">United States</option>
+            <option value="np">Nepal</option>
+            <option value="in">India</option>
             <option value="others">Others</option>
           </select>
         </div>
