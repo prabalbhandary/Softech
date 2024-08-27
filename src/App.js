@@ -1,9 +1,9 @@
 import React from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
-import { Route, Routes } from "react-router-dom";
-import Work from './pages/Works/Works'
+import Work from './pages/Works/Works';
 import Pricing from "./pages/Pricing/Pricing";
 import UseCases from "./pages/UseCases/UseCases";
 import Industries from "./pages/Industries/Industries";
@@ -16,10 +16,13 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 
 const App = () => {
+  const location = useLocation();
+  const hideHeaderFooter = location.pathname === "/login" || location.pathname === "/register";
+
   return (
     <div className="flex flex-col h-screen">
-      <Header />
-      <main className="pt-16 pb-16">
+      {!hideHeaderFooter && <Header />}
+      <main className={`pt-16 pb-16 ${hideHeaderFooter ? 'h-full' : ''}`}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/works" element={<Work />} />
@@ -35,7 +38,7 @@ const App = () => {
           <Route path="/register" element={<Register />} />
         </Routes>
       </main>
-      <Footer />
+      {!hideHeaderFooter && <Footer />}
     </div>
   );
 };
