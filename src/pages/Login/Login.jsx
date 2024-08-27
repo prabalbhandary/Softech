@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
 
 const Login = () => {
+  const handleClick = (e) => {
+    e.preventDefault()
+  }
   const img =
     "https://allhoursproductb0b1.blob.core.windows.net/static-files/f45ff764-794c-4652-972e-1287f90c7b81/logo-svg";
   const img2 =
@@ -42,7 +45,7 @@ const Login = () => {
             <FaEye className="text-gray-500 cursor-pointer" />
           </div>
         </div>
-        <button className="w-full bg-teal-400 text-white py-2 rounded-md hover:bg-teal-500">
+        <button onClick={handleClick} className="w-full bg-teal-400 text-white py-2 rounded-md hover:bg-teal-500">
           Login
         </button>
         <hr className="my-6" />

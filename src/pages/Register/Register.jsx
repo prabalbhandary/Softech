@@ -3,6 +3,9 @@ import { FaRegCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Register = () => {
+  const handleClick = (e) => {
+    e.preventDefault()
+  }
   const img =
     "https://allhoursproductb0b1.blob.core.windows.net/static-files/f45ff764-794c-4652-972e-1287f90c7b81/logo-svg";
   
@@ -110,6 +113,7 @@ const Register = () => {
         <button
           type="submit"
           className="w-full bg-teal-400 text-white py-2 rounded-lg mt-4 hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-300"
+          onClick={handleClick}
         >
           Register
         </button>
