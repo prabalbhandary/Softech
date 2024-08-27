@@ -60,7 +60,7 @@ const Header = () => {
             </button>
             <div
               className={`absolute bg-white mt-2 py-2 rounded-lg w-48 shadow-lg ${
-                isResourcesOpen || isResourcesHovered ? "block" : "hidden"
+                isResourcesOpen || isResourcesHovered ? "block shadow-teal-400" : "hidden"
               }`}
             >
               <Link
