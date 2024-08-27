@@ -31,17 +31,24 @@ const Frequent = () => {
   };
 
   return (
-    <section>
-      <h1>FAQ</h1>
+    <section className="p-6 max-w-3xl mx-auto">
+      <h1 className="text-2xl font-bold mb-4">FAQ</h1>
       {questions.map((question, index) => (
-        <div key={index} className="faq-item">
-          <div className="faq-question flex gep-8" onClick={() => handleToggle(index)}>
-            <span>{question}</span>
-            {expandedIndex === index ? <FaAngleUp /> : <FaChevronDown />}
+        <div key={index} className="border-b border-gray-200 mb-4">
+          <div
+            className="flex justify-between items-center py-3 cursor-pointer hover:bg-gray-100 transition"
+            onClick={() => handleToggle(index)}
+          >
+            <span className="text-lg font-semibold text-gray-800">{question}</span>
+            {expandedIndex === index ? (
+              <FaAngleUp className="text-gray-600" />
+            ) : (
+              <FaChevronDown className="text-gray-600" />
+            )}
           </div>
           {expandedIndex === index && (
             <div
-              className="faq-answer"
+              className="px-4 py-2 text-gray-700"
               dangerouslySetInnerHTML={{ __html: answers[index] }}
             />
           )}
