@@ -3,17 +3,15 @@ import { FaRegCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Register = () => {
-  const handleClick = (e) => {
-    e.preventDefault()
-  }
-  const img =
-    "https://allhoursproductb0b1.blob.core.windows.net/static-files/f45ff764-794c-4652-972e-1287f90c7b81/logo-svg";
-  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <section className="flex flex-col items-center p-6 max-w-md mx-auto bg-white shadow-md rounded-lg">
       <div className="mb-6">
         <Link to="/">
-          <img src={img} alt="Logo" className="h-12 w-auto" />
+          <img src="https://allhoursproductb0b1.blob.core.windows.net/static-files/f45ff764-794c-4652-972e-1287f90c7b81/logo-svg" alt="Logo" className="h-12 w-auto" />
         </Link>
       </div>
       <h1 className="text-2xl font-bold mb-4">Free trial of My Hours</h1>
@@ -31,7 +29,7 @@ const Register = () => {
           <span>No credit card</span>
         </div>
       </div>
-      <form className="w-full space-y-4">
+      <form className="w-full space-y-4" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name" className="block text-sm font-semibold mb-1">
             <strong>FULL NAME</strong>
@@ -103,17 +101,20 @@ const Register = () => {
           </label>
           <p className="text-gray-600 text-xs mb-2">So we can customize your experience</p>
           <div className="flex gap-4">
-            <button type="button" className="bg-teal-200 px-4 py-2 rounded-lg text-sm">1-5</button>
-            <button type="button" className="bg-teal-200 px-4 py-2 rounded-lg text-sm">6-20</button>
-            <button type="button" className="bg-teal-200 px-4 py-2 rounded-lg text-sm">21-100</button>
-            <button type="button" className="bg-teal-200 px-4 py-2 rounded-lg text-sm">101-300</button>
-            <button type="button" className="bg-teal-200 px-4 py-2 rounded-lg text-sm">300+</button>
+            {["1-5", "6-20", "21-100", "101-300", "300+"].map(size => (
+              <button
+                key={size}
+                type="button"
+                className={`bg-teal-200 px-4 py-2 rounded-lg text-sm`}
+              >
+                {size}
+              </button>
+            ))}
           </div>
         </div>
         <button
           type="submit"
           className="w-full bg-teal-400 text-white py-2 rounded-lg mt-4 hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-300"
-          onClick={handleClick}
         >
           Register
         </button>
